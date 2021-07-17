@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name:  ingress-nginx
+  namespace: wordpress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: my-blog-ip
+  labels:
+    app: wordpress
+spec:
+  backend:
+    serviceName: wordpress
+    servicePort: 80
+---
+#kind: Ingress
+#apiVersion: extensions/v1beta1
+#metadata:
+#  name:  ingress-nginx
+#  namespace: wordpress
+#  annotations:
+#    nginx.ingress.kubernetes.io/rewrite-target: /
+#    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+#spec:
+##  rules:
+# - http:
+#      paths:
+#      - path: /
+#        backend:
+#          serviceName: wordpress 
+#          servicePort: 80
