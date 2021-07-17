@@ -2,12 +2,13 @@ kind: PersistentVolume
 apiVersion: v1
 metadata:
   name: mysql-pv
+  namespace: wordpress
   labels:
     tier: mysql
 spec:
   storageClassName: standard
   capacity:
-    storage: 20Gi
+    storage: 2Gi
   accessModes:
     - ReadWriteOnce
   hostPath:

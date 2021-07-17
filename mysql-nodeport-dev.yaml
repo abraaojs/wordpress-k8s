@@ -2,6 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name:  mysql-nodeport-dev
+  namespace: wordpress
 spec:
   selector:
     app:  wordpress

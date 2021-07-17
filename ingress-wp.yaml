@@ -2,6 +2,7 @@ kind: Ingress
 apiVersion: extensions/v1beta1
 metadata:
   name:  ingress-nginx
+  namespace: wordpress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
